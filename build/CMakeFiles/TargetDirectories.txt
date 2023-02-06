@@ -1,0 +1,3 @@
+/Users/Ruslan.Mukhamadiarov/Work/ML-and-Physics/test-libtorch/build/CMakeFiles/linear_regression.dir
+/Users/Ruslan.Mukhamadiarov/Work/ML-and-Physics/test-libtorch/build/CMakeFiles/edit_cache.dir
+/Users/Ruslan.Mukhamadiarov/Work/ML-and-Physics/test-libtorch/build/CMakeFiles/rebuild_cache.dir

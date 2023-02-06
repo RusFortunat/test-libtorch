@@ -1,0 +1,9 @@
+How to prepare your project folder to build with libtorch:
+
+1. Go to 'build' directory of your project and execute this command (make sure CMakeLists.txt is updated)
+
+cmake -DCMAKE_PREFIX_PATH=/Users/Ruslan.Mukhamadiarov/Work/ML-and-Physics/test-libtorch/libtorch ..
+
+2. Create your executable by running this command
+
+cmake --build . --config Release
