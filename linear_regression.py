@@ -16,7 +16,6 @@ r1=0
 r2=10
 
 # Sample dataset
-#x_train = -10*T.randn(15,1, requires_grad=True) + 10 # creates random distribution in range 0:10
 x_train = T.FloatTensor(a, b).uniform_(r1, r2) # creates random distribution in range 0:10
 y_train = T.FloatTensor(a, b).uniform_(r1, r2)
 
@@ -24,19 +23,18 @@ y_train = T.FloatTensor(a, b).uniform_(r1, r2)
 model = nn.Linear(input_size, output_size)
 
 # Optimizer
-optimizer = T.optim.SGD(model.parameters(), lr=learning_rate) # give network an optimizer
+optimizer = T.optim.SGD(model.parameters(), lr=learning_rate)
 
 print("Training...\n")
 
 # Train the model
 for epoch in range(0, num_epochs):
     # Forward pass
-    Loss = nn.MSELoss()
     output = model.forward(x_train)
-    #print(output)
-    loss = Loss(output, y_train)
 
     # Backward pass and optimize
+    Loss = nn.MSELoss()
+    loss = Loss(output, y_train)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
